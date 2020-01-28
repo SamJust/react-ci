@@ -18,6 +18,7 @@
   },
   "homepage": "https://gitlab.com/SamJust/ci-test#readme",
   "dependencies": {
+    "express": "^4.17.1",
     "jest": "^25.1.0"
   }
 }
