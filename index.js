@@ -5,6 +5,11 @@ const path = require('path');
 const app = express();
 const controllers = require('./controllers');
 
+app.use((req, res, next) => {
+	console.log(`${Date.now()}: INCOMING REQUEST >>> ${req.url}`);
+	next();
+});
+
 app.get('/api/', controllers.get);
 
 app.use((req, res) => {
