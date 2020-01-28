@@ -5,6 +5,8 @@ const path = require('path');
 const app = express();
 const controllers = require('./controllers');
 
+const PORT = process.env.PORT || 3000;
+
 app.use((req, res, next) => {
 	console.log(`${Date.now()}: INCOMING REQUEST >>> ${req.url}`);
 	next();
@@ -18,6 +20,6 @@ app.use((req, res) => {
 	stream.pipe(res);
 });
 
-app.listen(3001, () => {
-	console.log('listening ot port 3000');
+app.listen(PORT, () => {
+	console.log('listening ot port ' + PORT);
 });
