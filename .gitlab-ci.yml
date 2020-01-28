@@ -1,2 +1,4 @@
+image: "node:lastest"
+
 job1:
   script: "npm run test"
