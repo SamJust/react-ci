@@ -1,4 +1,5 @@
 image: node:10.15.3-alpine
 
 job1:
+  script: "npm i"
   script: "npm run test"
